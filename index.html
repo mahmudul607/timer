@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <style>
+        #count_field{
+            width: 100%;
+           
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row-reverse;
+         
+
+        }
+        h5{
+            display: inline-block;
+            width: 10%;
+            
+            /* border: 1px solid black; */
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <header class="text-center my-10">Count Your Work Time</header>
+    <div class="main text-center">
+        <div id="count_field" class="my-5 text-6xl">
+            <h5><span id="mili_seconds">0</span><sub>ms</sub></h5>
+            <h5><span id="second">0</span><sub>s</sub></h5>
+            <h5><span id="minute">0</span><sub>m</sub></h5>
+            <h5><span id="hour">0</span><sub>h</sub></h5>
+            <h5><span id="day">0</span><sub>d</sub></h5>
+        </div>
+        <button class="btn btn-primary" id="start" onclick="handleStart()">START</button>  
+        <button class="btn btn-accent" id="stop" onclick="handleStop()">STOP</button>
+        <button class="btn btn-primary" id="reset" onclick="handleReset()">RESET</button>    
+    </div>
+    <script src="watch.js"></script>
+</body>
+</html>
